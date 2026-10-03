@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AromaCraft — кав'ярня в Києві</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=Manrope:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <a href="#top" class="brand" id="top" aria-label="AromaCraft">
+    <svg class="logo" viewBox="0 0 64 64" aria-hidden="true">
+      <circle cx="32" cy="32" r="30" fill="#3b2a20"/>
+      <circle cx="32" cy="32" r="26" fill="none" stroke="#e8d3b9" stroke-width="1.5"/>
+      <text x="32" y="40" text-anchor="middle" font-family="Fraunces, serif" font-weight="700" font-size="24" fill="#f6ebdc">AC</text>
+    </svg>
+    <span class="brand-name">AromaCraft</span>
+  </a>
+  <nav class="nav">
+    <a href="#menu">Меню</a>
+    <a href="#order">Замовлення</a>
+    <a href="#map">Як нас знайти</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="hero-text">
+      <h1>Кава, зроблена з уважністю</h1>
+      <p>Свіжообсмажені зерна, повільна екстракція та тиха атмосфера в центрі Києва.</p>
+      <div class="rating" aria-label="Рейтинг 4.8 з 5">
+        <span class="stars">★★★★★</span>
+        <strong>4.8</strong>
+        <span>на основі 1 240 відгуків</span>
+      </div>
+      <a href="#order" class="btn">Зробити замовлення</a>
+    </div>
+    <div class="collage">
+      <img class="c1" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=80" alt="Лате в білій чашці" onerror="this.style.display='none'">
+      <img class="c2" src="https://images.unsplash.com/photo-1442512595331-e89e73853f31?auto=format&fit=crop&w=800&q=80" alt="Інтер'єр кав'ярні" onerror="this.style.display='none'">
+      <img class="c3" src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?auto=format&fit=crop&w=800&q=80" alt="Кавові зерна та чашка" onerror="this.style.display='none'">
+    </div>
+  </section>
+
+  <section class="section" id="menu">
+    <h2>Меню</h2>
+    <div class="grid" id="menuGrid"></div>
+  </section>
+
+  <section class="section order" id="order">
+    <h2>Замовлення</h2>
+    <div class="order-wrap">
+      <div class="cart">
+        <h3>Ваш кошик</h3>
+        <ul id="cartList"><li class="empty">Додайте позиції з меню</li></ul>
+        <div class="total">Разом: <strong id="total">0 ₴</strong></div>
+      </div>
+      <form class="form" id="orderForm">
+        <label>Ім'я<input type="text" name="name" required autocomplete="name"></label>
+        <label>Телефон<input type="tel" name="phone" required autocomplete="tel" placeholder="+380"></label>
+        <label>Коли забрати
+          <select name="time">
+            <option>Якнайшвидше</option>
+            <option>Через 30 хвилин</option>
+            <option>Через годину</option>
+          </select>
+        </label>
+        <button type="submit" class="btn">Оформити замовлення</button>
+        <p class="msg" id="msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer-grid" id="map">
+    <a class="mini-map" href="https://www.google.com/maps/dir/?api=1&destination=50.4501,30.5234&travelmode=walking" target="_blank" rel="noopener" aria-label="Відкрити маршрут у Google Maps">
+      <iframe src="https://www.google.com/maps?q=50.4501,30.5234&z=15&output=embed" title="Карта" loading="lazy" tabindex="-1"></iframe>
+      <span class="map-hint">Побудувати маршрут</span>
+    </a>
+    <div class="footer-info">
+      <p class="brand-name">AromaCraft</p>
+      <p>Київ, Хрещатик · щодня 8:00–22:00</p>
+    </div>
+    <div class="socials">
+      <a href="https://uk.wikipedia.org/wiki/Telegram" target="_blank" rel="noopener">Telegram</a>
+      <a href="https://uk.wikipedia.org/wiki/Instagram" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://uk.wikipedia.org/wiki/Facebook" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
